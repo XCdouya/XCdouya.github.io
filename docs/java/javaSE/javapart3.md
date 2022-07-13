@@ -553,7 +553,7 @@ public static void printUsers(GenericList<? extends User> list){
 
 ### 3.1 简介
 
-![image-20210606165521361](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/images/image-20210606165521361.png)
+![image-20210606165521361](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210606165521361.png)
 
 绿色为接口，蓝色为实现类：
 
@@ -1456,7 +1456,7 @@ IntStream.rangeClosed(1, 5)
 - `Process`：进程就是应用程序的一个实例。进程中包含了程序中所需要的所有数据以及相关其它资源，并且占用一定内存空间。操作系统在同一时间可以运行多个进程。（进程级别的并发）
 - `Thread`：线程，从技术上来讲，就是由多个指令或操作形成的序列（线程名称的由来），或者说线程就是执行我们所写代码的“主体”。一个进程至少由一个主线程（`main thread`）组成，同时，我们还可以创建更多的线程执行其它的任务。（线程级别的并发）
 
-![image-20210609220615952](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/images/image-20210609220615952.png)
+![image-20210609220615952](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210609220615952.png)
 
 ```java
 // 获取当前活跃线程数量
@@ -1571,7 +1571,7 @@ public class ThreadDemo {
 
 ### 6.4 并发带来的问题
 
-![image-20210610230509662](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/images/image-20210610230509662.png)
+![image-20210610230509662](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210610230509662.png)
 
 在此前演示的案例中，每个线程都是单独下载自己的文件，这并不会带来任何负面的影响，但是，如果多个线程共同下载同一个文件，便会引发如下问题：
 
@@ -1655,7 +1655,7 @@ public void incrementTotalBytes(){
 
 整个方法的逻辑由于包含了 3 步操作，因此我们称之为`非原子操作`（`non - atomic operation`，不能再进一步细分的操作），假定发生如下场景，那么就会导致对要修改的数据，其中某一个线程的修改操作无效（被另一个线程的修改操作覆盖）：
 
-![image-20210611000148654](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/images/image-20210611000148654.png)
+![image-20210611000148654](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210611000148654.png)
 
 解决方案：
 
@@ -1665,7 +1665,7 @@ public void incrementTotalBytes(){
 
 - 将线程同步化（`synchronization`）：使用锁（`Lock`）防止多个线程在同一时间访问同一个数据
 
-  ![image-20210611003512160](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/images/image-20210611003512160.png)
+  ![image-20210611003512160](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210611003512160.png)
 
   我们可以给某一部分代码加上`lock`，让这份代码在同一时间只能被一个线程执行，在执行期间，其它线程只能等待前一个线程执行完毕，才能继续访问这块代码。这最终就形成了所有线程对同一个数据的多个操作只能依次有序进行。（线程同步非常容易导致死锁，`dead lock`）
 
@@ -1849,7 +1849,7 @@ public class ThreadDemo {
 
 
 
-![image-20210611030505411](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/images/image-20210611030505411.png)
+![image-20210611030505411](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210611030505411.png)
 
 解决方法：
 
