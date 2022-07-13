@@ -38,7 +38,7 @@
 
   * 新建一个SSH key将复制下来的公钥粘贴到下面区域
 
-    ![1657705773605](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlogimages/1657705773605.png)
+    ![1657705773605](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657705773605.png)
 
     
 
