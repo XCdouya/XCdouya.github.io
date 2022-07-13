@@ -10,5 +10,9 @@
  
 
 * javaSE
-  * [java](javaSE/java.md)
-  
+  * [java基础语法](javaSE/javapart1.md)
+  * [java面向对象](javaSE/javapart2-OOP.md)
+  * [java高级编程](javaSE/javapart3.md)
+
+* javaWeb
+  * []()  
