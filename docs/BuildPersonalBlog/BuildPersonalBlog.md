@@ -83,7 +83,7 @@ typora-copy-images-to: images
 
 **改变图中选项，然后点Save保存**
 
-![1657709473614](D:\XCdouya.github.io\docs\BuildPersonalBlog\images\1657709473614.png)
+![1657709473614](images\1657709473614.png)
 
 
 
