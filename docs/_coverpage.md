@@ -19,4 +19,4 @@
 [Gitee](https://gitee.com/sinalvisi/qian-feng-study.git)
 [GitHub](https://github.com/docsifyjs/docsify/)
 [Get Started](README.md)
-![](＃FFC0CB)
+<!-- ![](＃FFC0CB) -->
