@@ -55,7 +55,7 @@ Network = IP & Mask = 101.202.99.0
 
 所以，一台计算机的一个网卡会有3个关键配置：
 
-![image-20210817130832261](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817130832261.png)
+![image-20210817130832261](images/image-20210817130832261.png)
 
 - IP地址，例如：`10.0.2.15`
 - 子网掩码，例如：`255.255.255.0`
@@ -118,7 +118,7 @@ UDP协议（User Datagram Protocol）是一种数据报文协议，它是无连�
 
 在开发网络应用程序的时候，我们又会遇到Socket这个概念。Socket是一个抽象概念，一个应用程序通过一个Socket来建立一个远程连接，而Socket内部通过TCP/IP协议把数据传输到网络：
 
-![image-20210817131726366](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817131726366.png)
+![image-20210817131726366](images/image-20210817131726366.png)
 
 Socket、TCP和部分IP的功能都是由操作系统提供的，不同的编程语言只是提供了对操作系统调用的简单的封装。例如，Java提供的几个Socket相关的类就封装了操作系统提供的接口。
 
@@ -404,7 +404,7 @@ HTTP是HyperText Transfer Protocol的缩写，翻译为超文本传输协议，�
 
 我们来看一下浏览器请求访问某个网站时发送的HTTP请求-响应。当浏览器希望访问某个网站时，浏览器和网站服务器之间首先建立TCP连接，且服务器总是使用`80`端口和加密端口`443`，然后，浏览器向服务器发送一个HTTP请求，服务器收到后，返回一个HTTP响应，并且在响应中包含了HTML的网页内容，这样，浏览器解析HTML后就可以给用户显示网页了。一个完整的HTTP请求-响应如下：
 
-![image-20210817133229735](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817133229735.png)
+![image-20210817133229735](images/image-20210817133229735.png)
 
 HTTP请求的格式是固定的，它由HTTP Header和HTTP Body两部分构成。第一行总是`请求方法 路径 HTTP版本`，例如，`GET / HTTP/1.1`表示使用`GET`请求，路径是`/`，版本是`HTTP/1.1`。
 
@@ -473,13 +473,13 @@ Content-Length: 18391
 
 对于最早期的HTTP/1.0协议，每次发送一个HTTP请求，客户端都需要先创建一个新的TCP连接，然后，收到服务器响应后，关闭这个TCP连接。由于建立TCP连接就比较耗时，因此，为了提高效率，HTTP/1.1协议允许在一个TCP连接中反复发送-响应，这样就能大大提高效率：
 
-![image-20210817133323392](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817133323392.png)
+![image-20210817133323392](images/image-20210817133323392.png)
 
 因为HTTP协议是一个请求-响应协议，客户端在发送了一个HTTP请求后，必须等待服务器响应后，才能发送下一个请求，这样一来，如果某个响应太慢，它就会堵住后面的请求。
 
 所以，为了进一步提速，HTTP/2.0允许客户端在没有收到响应的时候，发送多个HTTP请求，服务器返回响应的时候，不一定按顺序返回，只要双方能识别出哪个响应对应哪个请求，就可以做到并行发送和接收：
 
-![image-20210817133401903](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817133401903.png)
+![image-20210817133401903](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/images/image-20210817133401903.png)
 
 可见，HTTP/2.0进一步提高了效率。
 
@@ -607,11 +607,11 @@ Web页面具有极强的交互性。由于Web页面是用HTML编写的，而HTML
 
 HTTP协议是一个基于TCP协议之上的请求-响应协议，它非常简单，我们先使用Chrome浏览器查看新浪首页，然后选择View - Developer - Inspect Elements就可以看到HTML：
 
-![image-20210817134457372](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817134457372.png)
+![image-20210817134457372](images/image-20210817134457372.png)
 
 切换到Network，重新加载页面，可以看到浏览器发出的每一个请求和响应：
 
-![image-20210817134527096](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817134527096.png)
+![image-20210817134527096](images/image-20210817134527096.png)
 
 >  使用Chrome浏览器可以方便地调试Web应用程序。
 
@@ -793,7 +793,7 @@ HTTP 3.0为了进一步提高速度，将抛弃TCP协议，改为使用无需创
 
 因此，在JavaEE平台上，处理TCP连接，解析HTTP协议这些底层工作统统扔给现成的Web服务器去做，我们只需要把自己的应用程序跑在Web服务器上。为了实现这一目的，JavaEE提供了Servlet API，我们使用Servlet API编写自己的Servlet来处理HTTP请求，Web服务器实现Servlet API接口，实现底层功能：
 
-![image-20210817135240464](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817135240464.png)
+![image-20210817135240464](images/image-20210817135240464.png)
 
 我们来实现一个最简单的Servlet：
 
@@ -933,7 +933,7 @@ Tomcat started.
 
 在浏览器输入`http://localhost:8080/hello/`即可看到`HelloServlet`的输出：
 
-![image-20210817135445872](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210817135445872.png)
+![image-20210817135445872](images/image-20210817135445872.png)
 
 细心的童鞋可能会问，为啥路径是`/hello/`而不是`/`？因为一个Web服务器允许同时运行多个Web App，而我们的Web App叫`hello`，因此，第一级目录`/hello`表示Web App的名字，后面的`/`才是我们在`HelloServlet`中映射的路径。
 
@@ -1015,7 +1015,7 @@ public class IndexServlet extends HttpServlet {
 
 浏览器发出的HTTP请求总是由Web Server先接收，然后，根据Servlet配置的映射，不同的路径转发到不同的Servlet：
 
-![image-20210818131955540](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818131955540.png)
+![image-20210818131955540](images/image-20210818131955540.png)
 
 这种根据路径转发的功能我们一般称为Dispatch。映射到`/`的`IndexServlet`比较特殊，它实际上会接收所有未匹配的路径，相当于`/*`，因为Dispatcher的逻辑可以用伪代码实现如下：
 
@@ -1129,11 +1129,11 @@ Location: /hello
 
 当浏览器收到302响应后，它会立刻根据`Location`的指示发送一个新的`GET /hello`请求，这个过程就是重定向：
 
-![image-20210818132503037](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818132503037.png)
+![image-20210818132503037](images/image-20210818132503037.png)
 
 观察Chrome浏览器的网络请求，可以看到两次HTTP请求：
 
-![image-20210818132533580](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818132533580.png)
+![image-20210818132533580](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/images/image-20210818132533580.png)
 
 并且浏览器的地址栏路径自动更新为`/hello`。
 
@@ -1169,11 +1169,11 @@ req.getRequestDispatcher("/hello").forward(req, resp);
 
 后续请求的处理实际上是由`HelloServlet`完成的。这种处理方式称为转发（Forward），我们用流程图画出来如下：
 
-![image-20210818132714652](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818132714652.png)
+![image-20210818132714652](images/image-20210818132714652.png)
 
 转发和重定向的区别在于，转发是在Web服务器内部完成的，对浏览器来说，它只发出了一个HTTP请求：
 
-![image-20210818132743100](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818132743100.png)
+![image-20210818132743100](images/image-20210818132743100.png)
 
 注意到使用转发的时候，浏览器的地址栏路径仍然是`/morning`，浏览器并不知道该请求在Web服务器内部实际上做了一次转发。
 
@@ -1273,11 +1273,11 @@ public class SignOutServlet extends HttpServlet {
 
 对于Web应用程序来说，我们总是通过`HttpSession`这个高级接口访问当前Session。如果要深入理解Session原理，可以认为Web服务器在内存中自动维护了一个ID到`HttpSession`的映射表，我们可以用下图表示：
 
-![image-20210818134300389](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818134300389.png)
+![image-20210818134300389](images/image-20210818134300389.png)
 
 而服务器识别Session的关键就是依靠一个名为`JSESSIONID`的Cookie。在Servlet中第一次调用`req.getSession()`时，Servlet容器自动创建一个Session ID，然后通过一个名为`JSESSIONID`的Cookie发送给浏览器：
 
-![image-20210818134326857](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818134326857.png)
+![image-20210818134326857](images/image-20210818134326857.png)
 
 这里要注意的几点是：
 
@@ -1299,7 +1299,7 @@ public class User {
 
 在使用多台服务器构成集群时，使用Session会遇到一些额外的问题。通常，多台服务器集群使用反向代理作为网站入口：
 
-![image-20210818134413880](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818134413880.png)
+![image-20210818134413880](images/image-20210818134413880.png)
 
 如果多台Web Server采用无状态集群，那么反向代理总是以轮询方式将请求依次转发给每台Web Server，这会造成一个用户在Web Server 1存储的Session信息，在Web Server 2和3上并不存在，即从Web Server 1登录后，如果后续请求被转发到Web Server 2或3，那么用户看到的仍然是未登录状态。
 
@@ -1350,7 +1350,7 @@ public class LanguageServlet extends HttpServlet {
 
 我们可以在浏览器看到服务器发送的Cookie：
 
-![image-20210818135716828](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818135716828.png)
+![image-20210818135716828](images/image-20210818135716828.png)
 
 如果我们要读取Cookie，例如，在`IndexServlet`中，读取名为`lang`的Cookie以获取用户设置的语言，可以写一个方法如下：
 
@@ -1434,7 +1434,7 @@ JSP页面内置了几个变量：
 
 访问JSP页面时，直接指定完整路径。例如，`http://localhost:8080/hello.jsp`，浏览器显示如下：
 
-![image-20210818133044315](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818133044315.png)
+![image-20210818133044315](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/images/image-20210818133044315.png)
 
 JSP和Servlet有什么区别？其实它们没有任何区别，因为JSP在执行前首先被编译成一个Servlet。在Tomcat的临时目录下，可以找到一个`hello_jsp.java`的源文件，这个文件就是Tomcat把JSP自动转换成的Servlet源码：
 
@@ -1576,11 +1576,11 @@ public class UserServlet extends HttpServlet {
 
 我们在浏览器访问`http://localhost:8080/user`，请求首先由`UserServlet`处理，然后交给`user.jsp`渲染：
 
-![image-20210818133606375](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818133606375.png)
+![image-20210818133606375](/Users/cuesky/Desktop/Courses/JavaEE/第2阶段/JavaWebPlus/images/image-20210818133606375.png)
 
 我们把`UserServlet`看作业务逻辑处理，把`User`看作模型，把`user.jsp`看作渲染，这种设计模式通常被称为MVC：Model-View-Controller，即`UserServlet`作为控制器（Controller），`User`作为模型（Model），`user.jsp`作为视图（View），整个MVC架构如下：
 
-![image-20210818133638083](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818133638083.png)
+![image-20210818133638083](images/image-20210818133638083.png)
 
 使用MVC模式的好处是，Controller专注于业务处理，它的处理结果就是Model。Model可以是一个JavaBean，也可以是一个包含多个对象的Map，Controller只负责把Model传递给View，View只负责把Model给“渲染”出来，这样，三者职责明确，且开发更简单，因为开发Controller时无需关注页面，开发View时无需关心如何创建Model。
 
@@ -1596,7 +1596,7 @@ MVC模式广泛地应用在Web页面和传统的桌面程序中，我们在这�
 
 我们考察这样一个论坛应用程序：
 
-![image-20210818134807809](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818134807809.png)
+![image-20210818134807809](images/image-20210818134807809.png)
 
 各个Servlet设计功能如下：
 
@@ -1632,7 +1632,7 @@ public class EncodingFilter implements Filter {
 
 添加了Filter之后，整个请求的处理架构如下：
 
-![image-20210818134927480](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818134927480.png)
+![image-20210818134927480](images/image-20210818134927480.png)
 
 还可以继续添加其他Filter，例如LogFilter：
 
@@ -1649,7 +1649,7 @@ public class LogFilter implements Filter {
 
 多个Filter会组成一个链，每个请求都被链上的Filter依次处理：
 
-![image-20210818135029916](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaWeb/images/image-20210818135029916.png)
+![image-20210818135029916](images/image-20210818135029916.png)
 
 有些细心的童鞋会问，有多个Filter的时候，Filter的顺序如何指定？多个Filter按不同顺序处理会造成处理结果不同吗？
 

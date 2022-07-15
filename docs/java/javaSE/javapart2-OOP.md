@@ -25,7 +25,7 @@ OOP的好处：
 - class：blueprint（蓝图），是用来创建对象的模版、图纸
 - object：是类的某个实例（instance）
 
-![image-20210525231836388](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210525231836388.png)
+![image-20210525231836388](images/image-20210525231836388.png)
 
 > 描述以下class：TV、文本输入框
 
@@ -77,7 +77,7 @@ var tb = new TextBox();
 
 `Java`通过内存来存储和管理数据，并将其划分为两个区域：
 
-![image-20210526224202525](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210526224202525.png)
+![image-20210526224202525](images/image-20210526224202525.png)
 
 - 基本数据类型：存储在栈这个区域
 
@@ -1152,7 +1152,7 @@ public interface Draggable {
 
 接口就像是一个类，但是里面一般只定义方法，而且这个方法没有任何实现细节。换句话说，接口只定义它应该做什么。
 
-![image-20210531231911734](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210531231911734.png)
+![image-20210531231911734](images/image-20210531231911734.png)
 
 要解藕`AB`的话，我们只需要在之间定义一个`interface`，当`B`的具体逻辑修改时，`A`将不再会受到影响，因为`A`根本就不了解`B`是如何实现的。这就是所谓的`面向接口编程`。
 
@@ -1383,7 +1383,7 @@ public interface UIWidget extends Draggable {
 
 ### 5.8 接口与抽象类
 
-![image-20210601233451636](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210601233451636.png)
+![image-20210601233451636](images/image-20210601233451636.png)
 
 ### 5.9 面向接口编程的益处
 

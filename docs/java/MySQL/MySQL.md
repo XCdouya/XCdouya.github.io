@@ -1284,7 +1284,7 @@ update xxx set yy = json_remove(yy,'$.k4') where z = 1;
 
 这样的概念，比如有：学生 / 课程等，我们需要一个方式来将这些实体可视化，可以使用`ER图`或者`UML`
 
-![image-20210725210958278](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210725210958278.png)
+![image-20210725210958278](images/image-20210725210958278.png)
 
 我们用它来理解需求，并和产品经理沟通
 
@@ -1294,13 +1294,13 @@ update xxx set yy = json_remove(yy,'$.k4') where z = 1;
 
 逻辑化建模，是独立于特定的数据库系统的，它是一种抽象的描述，来表示实体和数据结构的关系，因此比概念性建模细节更多
 
-![image-20210725212826186](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210725212826186.png)
+![image-20210725212826186](images/image-20210725212826186.png)
 
 ### 13.5 实体建模
 
 实体建模s，就是某个特定的数据库系统对逻辑建模的实现
 
-![image-20210725221248319](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210725221248319.png)
+![image-20210725221248319](images/image-20210725221248319.png)
 
 `Primary Key`主键，就是一个字段，唯一标识了表中的每一条记录
 
@@ -1308,9 +1308,9 @@ update xxx set yy = json_remove(yy,'$.k4') where z = 1;
 
 `Foreign Key Constraints`外键约束
 
-![image-20210725220358813](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210725220358813.png)
+![image-20210725220358813](images/image-20210725220358813.png)
 
-![image-20210725220602390](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210725220602390.png)
+![image-20210725220602390](images/image-20210725220602390.png)
 
 ### 13.6 数据库规范化
 
@@ -1320,11 +1320,11 @@ update xxx set yy = json_remove(yy,'$.k4') where z = 1;
 
    `courses`的tags列不太符合这个范式
 
-   ![image-20210727203849407](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210727203849407.png)
+   ![image-20210727203849407](images/image-20210727203849407.png)
 
 2. 第二范式：没有依赖任何关系的其它子集的非主键字段。通俗来说，即是，每个表都应该是单一功能的，它能且仅能表示一个实体，这个表的所有字段都是用来描述这个特定实体的。
 
-   ![image-20210727205420318](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210727205420318.png)
+   ![image-20210727205420318](images/image-20210727205420318.png)
 
 3. 第三范式：所有表中的字段都只依赖主键，与任何其它的字段值无关。即，一个表中的字段不应该由表中的其它字段推导而来。
 
@@ -1338,7 +1338,7 @@ update xxx set yy = json_remove(yy,'$.k4') where z = 1;
 
 ### 13.8 Project
 
-![image-20210727213649998](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210727213649998.png)
+![image-20210727213649998](images/image-20210727213649998.png)
 
 航班Flight / 乘客Passenger / 航空公司Airline / 机场Airport / 机票Ticket
 
@@ -1458,7 +1458,7 @@ alter table customers engine = innodb;
 
 在内部，索引是以`Binary Tree`二叉树的结构存在的，在这个“字典”中搜索指定的条目，形同二分查找法（这也是为何遍历这个字典比直接遍历全表的速度要快的原因之一）：
 
-![image-20210728204926297](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/MySQL/images/image-20210728204926297.png)
+![image-20210728204926297](images/image-20210728204926297.png)
 
 ### 14.2 创建索引
 

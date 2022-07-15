@@ -22,7 +22,7 @@
 
     
 
-    ![1657705450004](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657705450004.png)
+    ![1657705450004](images/1657705450004.png)
 
     
 
@@ -30,7 +30,7 @@
 
   *  登录github找到设置->SSH相关设置
 
-    ![1657705666746](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657705666746.png)
+    ![1657705666746](images/1657705666746.png)
 
     
 
@@ -38,19 +38,19 @@
 
   * 新建一个SSH key将复制下来的公钥粘贴到下面区域
 
-    ![1657705773605](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657705773605.png)
+    ![1657705773605](images/1657705773605.png)
 
     
 
 * **新建一个仓库**
 
-  ![1657703709793](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657703709793.png)
+  ![1657703709793](images/1657703709793.png)
 
 
 
 * **根据图片找到主题设置，点击Chooes a theme，随意设置一个主题，后面我们还会改的**
 
-  ![1657707599820](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657707599820.png)
+  ![1657707599820](images/1657707599820.png)
 
 
 
@@ -58,7 +58,7 @@
 
 * **设置完后回到代码页面，复制仓库地址，通过git命令克隆到本地**
 
-  ![1657708048836](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657708048836.png)
+  ![1657708048836](images/1657708048836.png)
 
   
 
@@ -68,7 +68,7 @@
 
 * **在本地仓库中打开cmd然后跟随docsify官方文档初始化**
 
-  ![1657709092343](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657709092343.png)
+  ![1657709092343](images/1657709092343.png)
 
 操作完成后，本地仓库目录下会多出一个doxc文件夹
 
@@ -80,7 +80,7 @@
 
 **改变图中选项，然后点Save保存**
 
-![1657709473614](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/BuildPersonalBlog/images/1657709473614.png)
+![1657709473614](images/1657709473614.png)
 
 
 

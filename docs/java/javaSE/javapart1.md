@@ -98,7 +98,7 @@ public class Main {
 
 #### 1.5.1 编译
 
-![image-20210414111545584](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210414111545584.png)
+![image-20210414111545584](images/image-20210414111545584.png)
 
 Java Compiler 即是我们在安装 JDK 的时候，自带的编译工具，我们可以使用 javac 来进行调用：
 
@@ -110,7 +110,7 @@ javac Main.java
 
 编译产生的 Java 字节码，是和操作系统无关的，我们可以在任意操作系统运行，前提是这个系统安装了 Java 运行环境（ JRE ，`Java Runtime Environment`），JRE 中有一个组件叫 Java 虚拟机（ JVM ，`Java Virtual Machine` ），会将 Java 字节码转换为当前操作系统的原生代码，而这个原生代码是可以被当前操作系统理解并直接执行的代码。
 
-![image-20210414112609275](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210414112609275.png)
+![image-20210414112609275](images/image-20210414112609275.png)
 
 > JVM 正是 Java程序无需安装、跨平台的原因，这是 Java 程序最大的特点之一。
 
@@ -150,7 +150,7 @@ final String SLOGAN = "Think about AI";
 
 ### 2.2. 数据类型
 
-![image-20210414164013175](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210414164013175.png)
+![image-20210414164013175](images/image-20210414164013175.png)
 
 #### 2.2.1 值类型数据
 
@@ -203,7 +203,7 @@ final String SLOGAN = "Think about AI";
     }
 ```
 
-![image-20210414174944990](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210414174944990.png)
+![image-20210414174944990](images/image-20210414174944990.png)
 
 每一个变量的值都是独立存储的，因此，修改一个变量的时候，不会影响其它的变量。
 
@@ -218,7 +218,7 @@ final String SLOGAN = "Think about AI";
     }
 ```
 
-![image-20210415092027802](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/image-20210415092027802.png)
+![image-20210415092027802](images/image-20210415092027802.png)
 
 当两个变量的值存储的是同一个对象的引用的时候，通过一个变量修改这个对象的值，会影响到引用这个对象的其它变量。
 

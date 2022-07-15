@@ -116,7 +116,7 @@
 
    程序运行结果为：
 
-   ![](https://raw.githubusercontent.com/XCdouya/XCdouya.github.io/main/docs/java/javaSE/images/Snipaste_2022-07-15_20-20-56.png)
+   ![](images/Snipaste_2022-07-15_20-20-56.png)
 
    
 
