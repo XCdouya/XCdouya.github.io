@@ -27,14 +27,14 @@
    * 第三步：jvm会调用构造器，执行构造器中的语句
    * 第四步：jvm将开辟出来的空间地址交予栈中某一变量持有
 
-   ```flow
+   ``` flow
    st=>start: jvm向内存申请空间
    op=>operation: 为对象的变量赋初始值
    op1=>operation: 调用构造器，执行构造器中的语句
    op2=>operation: 将空间地址返回给栈中变量
    e=>end
    st->op->op1->op2->e->
-   &```
+   & ```
 
 * 封装
 
