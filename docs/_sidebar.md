@@ -2,7 +2,7 @@
 
 * [**主页**](README.md)  
 
-* [**个人博客的搭建**](BuildPersonalBlog\BuildPersonalBlog.md)    
+* [**个人博客的搭建**](BuildPersonalBlog/BuildPersonalBlog.md)    
 
 * [**个人项目**](PersonalProjects/) 
 
