@@ -515,9 +515,7 @@ public boolean equals(Object obj) {
 
 ### 17.1、ArrayList
 
-ArrayList结构图如下：
 
-![](images\20200321205116862.png)
 
 
 
@@ -957,6 +955,9 @@ public class MyArrayList<T> implements List<T> {
 * ArrayList底层使用数组实现，因此随机查询、修改很快，因为数组的下标可以等同于内存地址，而随机增加和删除会慢一点，这两个操作需要将后续元素一个一个位移，增加了操作量
 
 * 插入有序
+* ArrayList结构图如下：
+
+![](images\20200321205116862.png)
 
 * 关于迭代器的思考：迭代器就相当于一个指针一样，指针一开始开始指向-1位置，而不是元素的位置
 
@@ -973,7 +974,10 @@ public class MyArrayList<T> implements List<T> {
   > 5. 再次进入while循环，调用hasNext()判断是否有下一个元素，返回false，循环结束。  
 
   ~~~
-  在 迭代器的遍历过程中先通过hastNext()方法判断是否有下一个元素，如果存在下一个元素再调用next()方法获取元素，在这里next()方法先往后移动一个元素位置，再返回该位置的元素。因此，在调用next()方法之前必须要调用hastNext()方法进行检测；如果没有调用并且没有下一个元素，直接调用next()方法会抛出 NoSuchElementException异常。
+  在 迭代器的遍历过程中先通过hastNext()方法判断是否有下一个元素，  
+  如果存在下一个元素再调用next()方法获取元素，在这里next()方法先往后移动一个元素位置， 再返回该位置的元素。  
+  因此，在调用next()方法之前必须要调用hastNext()方法进行检测；  
+  如果没有调用并且没有下一个元素，直接调用next()方法会抛出 NoSuchElementException异常。
   ~~~
 
 
