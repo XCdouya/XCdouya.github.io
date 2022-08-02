@@ -9,8 +9,8 @@
     * [java高级编程](java/javaSE/javapart3.md)
     * [学习心得](java/javaSE/myjavaSE.md)
   * **javaWeb**
-    * [javaWeb](java/javaWeb/JavaWeb.md)
+    * [javaWeb](java/javaWeb/)
   * **MySQL**
-    * [MySQL](java\MySQL\MySQL.md)
+    * [MySQL](java/MySQL/)
 
  
